@@ -33,18 +33,22 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ### Dashboard
 
+<img width="896" height="440" alt="Dashboad" src="https://github.com/user-attachments/assets/542c6a3d-9b73-402a-bb98-457ec2021693" />
 
 
 ### Merge PDFs
 
+<img width="905" height="369" alt="Merge" src="https://github.com/user-attachments/assets/de082ef5-94db-4d53-b629-d5d83064151c" />
 
 
 ### Split PDFs
 
+<img width="911" height="337" alt="Split" src="https://github.com/user-attachments/assets/4db1652f-d63d-43c8-a984-ead23450b3c2" />
 
 
 ### Extract Text
 
+<img width="903" height="441" alt="Exract" src="https://github.com/user-attachments/assets/b5f1f8e2-98a4-44c3-9ce2-6b34f2fa3637" />
 
 
 ---
