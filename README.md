@@ -33,19 +33,19 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ### Dashboard
 
-![Dashboard](./screenshots/home-page.png)
+
 
 ### Merge PDFs
 
-![Merge Tool](./screenshots/merge-tool.png)
+
 
 ### Split PDFs
 
-![Split Tool](./screenshots/split-tool.png)
+
 
 ### Extract Text
 
-![Extract Tool](./screenshots/extract-tool.png)
+
 
 ---
 
