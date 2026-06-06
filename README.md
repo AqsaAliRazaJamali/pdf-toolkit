@@ -1,9 +1,8 @@
 # Privacy-First Local PDF Toolkit
 
-![Privacy First](https://img.shields.io/badge/Privacy-First-success?style=for-the-badge)
-![Client Side Processing](https://img.shields.io/badge/Client--Side-Processing-blue?style=for-the-badge)
-![No File Uploads](https://img.shields.io/badge/No-File_Uploads-orange?style=for-the-badge)
-![Offline Friendly](https://img.shields.io/badge/Offline-Friendly-purple?style=for-the-badge)
+![PDF Merge](https://img.shields.io/badge/PDF-Merge-red?style=for-the-badge)
+![PDF Split](https://img.shields.io/badge/PDF-Split-blue?style=for-the-badge)
+![Text Extraction](https://img.shields.io/badge/Text-Extraction-green?style=for-the-badge)
 
 A modern PDF workspace that allows users to manipulate PDF documents entirely within the browser. By leveraging client-side processing with binary data handling, the application ensures complete privacy—your files never leave your device or get uploaded to a server.
 
