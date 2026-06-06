@@ -1,11 +1,9 @@
 # Privacy-First Local PDF Toolkit
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Privacy First](https://img.shields.io/badge/Privacy-First-success?style=for-the-badge)
+![Client Side Processing](https://img.shields.io/badge/Client--Side-Processing-blue?style=for-the-badge)
+![No File Uploads](https://img.shields.io/badge/No-File_Uploads-orange?style=for-the-badge)
+![Offline Friendly](https://img.shields.io/badge/Offline-Friendly-purple?style=for-the-badge)
 
 A modern PDF workspace that allows users to manipulate PDF documents entirely within the browser. By leveraging client-side processing with binary data handling, the application ensures complete privacy—your files never leave your device or get uploaded to a server.
 
