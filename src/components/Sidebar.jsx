@@ -1,21 +1,29 @@
 import React from 'react';
-import { LayoutDashboard, Combine, Scissors, FileText, ShieldCheck } from 'lucide-react';
+import { LayoutDashboard, Combine, Scissors, FileText, Sparkles, Shield } from 'lucide-react';
 
 export default function Sidebar({ currentView, setCurrentView }) {
   const menuItems = [
-    { id: 'dashboard', name: 'Dashboard', icon: LayoutDashboard },
-    { id: 'merge', name: 'Merge PDFs', icon: Combine },
-    { id: 'split', name: 'Split PDFs', icon: Scissors },
-    { id: 'extract', name: 'Extract Text', icon: FileText },
+    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+    { id: 'merge', label: 'Merge PDF', icon: Combine },
+    { id: 'split', label: 'Split PDF', icon: Scissors },
+    { id: 'extract', label: 'Extract Text', icon: FileText },
+    
+    // ✨ ADD THIS NAV NODE HERE:
+    { id: 'compress', label: 'Compress PDF', icon: Sparkles },
   ];
 
   return (
-    <div className="w-64 bg-slate-900 text-white h-screen fixed left-0 top-0 flex flex-col justify-between p-4">
-      <div>
-        <div className="flex items-center gap-2 px-2 py-4 mb-6 border-b border-slate-800">
-          <div className="bg-indigo-600 p-2 rounded-lg text-white font-bold text-xl">PDF</div>
-          <span className="font-bold text-lg tracking-wide">Toolkit Pro</span>
+    <aside className="w-64 bg-slate-900 border-r border-slate-800 text-slate-400 fixed h-full flex flex-col justify-between z-20">
+      <div className="p-6 space-y-8">
+        {/* Workspace Brand Title */}
+        <div className="flex items-center gap-2.5 text-white">
+          <div className="bg-indigo-600 p-2 rounded-xl text-white shadow-md shadow-indigo-600/20">
+            <Shield size={18} />
+          </div>
+          <span className="font-bold tracking-tight text-sm uppercase">PDF Studio</span>
         </div>
+
+        {/* Navigation Map */}
         <nav className="space-y-1">
           {menuItems.map((item) => {
             const Icon = item.icon;
@@ -24,23 +32,22 @@ export default function Sidebar({ currentView, setCurrentView }) {
               <button
                 key={item.id}
                 onClick={() => setCurrentView(item.id)}
-                className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                  isActive 
-                    ? 'bg-indigo-600 text-white' 
-                    : 'text-slate-400 hover:bg-slate-800 hover:text-white'
-                }`}
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 group
+                  ${isActive 
+                    ? 'bg-gradient-to-r from-indigo-600 to-indigo-700 text-white shadow-lg shadow-indigo-600/10' 
+                    : 'hover:bg-slate-800/60 hover:text-slate-200'}`}
               >
-                <Icon size={18} />
-                {item.name}
+                <Icon size={18} className={isActive ? 'text-white' : 'text-slate-400 group-hover:text-slate-300'} />
+                <span>{item.label}</span>
               </button>
             );
           })}
         </nav>
       </div>
-      <div className="flex items-center gap-2 p-2 bg-slate-800 rounded-lg text-xs text-slate-400">
-        <ShieldCheck size={16} className="text-emerald-500 shrink-0" />
-        <span>Privacy First: All processing happens locally in your browser.</span>
+
+      <div className="p-6 border-t border-slate-800 text-[11px] text-slate-500 font-medium">
+        v1.1.0 • Client Sandbox
       </div>
-    </div>
+    </aside>
   );
 }
