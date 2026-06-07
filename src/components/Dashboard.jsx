@@ -1,5 +1,5 @@
 import React from 'react';
-import { Combine, Scissors, FileText, Clock, Shield, Zap, HardDrive, ArrowUpRight } from 'lucide-react';
+import { Combine, Scissors, FileText, Clock, Shield, Zap, HardDrive, ArrowUpRight, Sparkles } from 'lucide-react';
 
 export default function Dashboard({ setCurrentView, activityLog }) {
   const tools = [
@@ -27,11 +27,18 @@ export default function Dashboard({ setCurrentView, activityLog }) {
       color: 'from-emerald-500 to-teal-600',
       badge: 'AI-Ready'
     },
+    {
+      id: 'compress',
+      name: 'PDF Compressor Studio',
+      desc: 'Optimize structural layouts and minimize document sizes safely in local memory.',
+      icon: Sparkles,
+      color: 'from-emerald-500 to-teal-600',
+      badge: 'New'
+    }
   ];
 
   // Derive dynamic metrics from the session log to show live data
   const totalOperations = activityLog.length;
-  const uniqueToolsUsed = new Set(activityLog.map(log => log.action.split(' ')[0])).size;
 
   return (
     <div className="space-y-10 max-w-6xl mx-auto">
