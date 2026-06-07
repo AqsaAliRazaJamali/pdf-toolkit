@@ -148,6 +148,7 @@ pdf-toolkit/
 ├── README.md                  # Project documentation
 ├── tailwind.config.js         # Tailwind CSS customization settings
 └── vite.config.js             # Vite development and build configuration
+
 ```
 
 ## 🔮 Future Improvements
