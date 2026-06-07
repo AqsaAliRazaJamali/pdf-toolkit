@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard';
 import MergeTool from './components/MergeTool';
 import SplitTool from './components/SplitTool';
 import ExtractTool from './components/ExtractTool';
+import CompressionTool from './components/CompressionTool';
 
 export default function App() {
   const [currentView, setCurrentView] = useState('dashboard');
@@ -27,13 +28,18 @@ export default function App() {
         return <SplitTool addLog={addLog} />;
       case 'extract':
         return <ExtractTool addLog={addLog} />;
+      
+      // ADD THESE TWO LINES HERE:
+      case 'compress':
+        return <CompressionTool addLog={addLog} />;
+      
       default:
         return <Dashboard setCurrentView={setCurrentView} activityLog={activityLog} />;
     }
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-slate-950 text-white">
       <Sidebar currentView={currentView} setCurrentView={setCurrentView} />
       <main className="ml-64 p-8 min-h-screen">
         <div className="max-w-6xl mx-auto">
