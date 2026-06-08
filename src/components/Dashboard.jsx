@@ -1,166 +1,160 @@
 import React from 'react';
-import { Combine, Scissors, FileText, Clock, Shield, Zap, HardDrive, ArrowUpRight, Sparkles } from 'lucide-react';
+import { 
+  Zap, 
+  FolderSync, 
+  Scissors, 
+  FileText, 
+  RefreshCw, 
+  Clock, 
+  ShieldCheck, 
+  Cpu 
+} from 'lucide-react';
 
-export default function Dashboard({ setCurrentView, activityLog }) {
+export default function Dashboard({ setCurrentView, logs }) {
   const tools = [
-    { 
-      id: 'merge', 
-      name: 'Merge Documents', 
-      desc: 'Combine multiple PDF files into a single, seamless document while preserving layout order.', 
-      icon: Combine, 
-      color: 'from-blue-500 to-indigo-600',
-      badge: 'Popular'
-    },
-    { 
-      id: 'split', 
-      name: 'Split & Extract Pages', 
-      desc: 'Sparsely detach page ranges or isolate single sheets into dedicated standalone files.', 
-      icon: Scissors, 
-      color: 'from-amber-500 to-orange-600',
-      badge: 'Precise'
-    },
-    { 
-      id: 'extract', 
-      name: 'Text Extraction Studio', 
-      desc: 'Instantly scrub hidden ASCII text layers out of structural elements into plaintext.', 
-      icon: FileText, 
-      color: 'from-emerald-500 to-teal-600',
-      badge: 'AI-Ready'
-    },
     {
       id: 'compress',
-      name: 'PDF Compressor Studio',
-      desc: 'Optimize structural layouts and minimize document sizes safely in local memory.',
-      icon: Sparkles,
+      title: 'Compress PDF',
+      desc: 'Restructure file tokens and binary payloads in local RAM to reclaim storage space.',
+      icon: Zap,
       color: 'from-emerald-500 to-teal-600',
-      badge: 'New'
+      hover: 'hover:border-emerald-500/30 shadow-emerald-500/5'
+    },
+    {
+      id: 'merge',
+      title: 'Merge Documents',
+      desc: 'Combine multiple PDF file streams into a single layout document with custom sorting.',
+      icon: FolderSync,
+      color: 'from-blue-500 to-indigo-600',
+      hover: 'hover:border-blue-500/30 shadow-blue-500/5'
+    },
+    {
+      id: 'split',
+      title: 'Split & Extract',
+      desc: 'Slice pages or explicit custom page ranges into fully independent standalone files.',
+      icon: Scissors,
+      color: 'from-rose-500 to-pink-600',
+      hover: 'hover:border-rose-500/30 shadow-rose-500/5'
+    },
+    {
+      id: 'extract',
+      title: 'Extract Text',
+      desc: 'Scrub text encoding layers directly out of structural layout streams into clear text files.',
+      icon: FileText,
+      color: 'from-purple-500 to-violet-600',
+      hover: 'hover:border-purple-500/30 shadow-purple-500/5'
+    },
+    {
+      id: 'rotate', // Added Integration Card
+      title: 'Rotate Sheets',
+      desc: 'Adjust spatial degrees orientation of specific page arrays while keeping vectors intact.',
+      icon: RefreshCw,
+      color: 'from-amber-500 to-orange-600',
+      hover: 'hover:border-amber-500/30 shadow-amber-500/5'
     }
   ];
 
-  // Derive dynamic metrics from the session log to show live data
-  const totalOperations = activityLog.length;
-
   return (
-    <div className="space-y-10 max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto p-6 space-y-8 animate-in fade-in duration-300">
       
-      {/* Premium Hero Banner */}
-      <div className="relative bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-2xl p-8 shadow-xl overflow-hidden border border-slate-800">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"></div>
-        <div className="relative z-10 max-w-2xl space-y-2">
-          <span className="inline-flex items-center gap-1.5 text-xs font-semibold bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 px-3 py-1 rounded-full backdrop-blur-md">
-            <Zap size={12} className="animate-pulse text-indigo-400" /> Client-Side Engine Active
-          </span>
-          <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
-            Local Document Workspace
-          </h1>
-          <p className="text-sm md:text-base text-slate-400 leading-relaxed">
-            Run hyper-fast file transformations straight inside your browser compilation sandbox. Your uploads never touch a third-party server.
-          </p>
-        </div>
+      {/* HEADER SECTION */}
+      <div className="flex flex-col space-y-2">
+        <h2 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+          Workspace Dashboard
+        </h2>
+        <p className="text-slate-400 text-sm max-w-xl">
+          Welcome to your local document matrix. Select an operation module below to modify binary file streams safely inside your web viewport.
+        </p>
       </div>
 
-      {/* Analytics Matrix Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-        <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm flex items-center gap-4">
-          <div className="p-3 bg-indigo-50 text-indigo-600 rounded-xl">
-            <Zap size={22} />
+      {/* CORE PERFORMANCE ANALYTICS SUMMARY BOXES */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="p-4 bg-white/5 border border-white/5 rounded-2xl flex items-center gap-4">
+          <div className="p-3 bg-emerald-500/10 rounded-xl border border-emerald-500/20 text-emerald-400">
+            <ShieldCheck className="w-5 h-5" />
           </div>
           <div>
-            <div className="text-xs font-medium text-slate-400 uppercase tracking-wider">Session Speed</div>
-            <div className="text-xl font-bold text-slate-800 mt-0.5">Instant (0ms server latency)</div>
+            <p className="text-xs text-slate-400 font-medium">Privacy Status</p>
+            <p className="text-sm font-bold text-slate-200">100% Air-Gapped Sandbox</p>
           </div>
         </div>
-
-        <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm flex items-center gap-4">
-          <div className="p-3 bg-emerald-50 text-emerald-600 rounded-xl">
-            <Shield size={22} />
+        <div className="p-4 bg-white/5 border border-white/5 rounded-2xl flex items-center gap-4">
+          <div className="p-3 bg-blue-500/10 rounded-xl border border-blue-500/20 text-blue-400">
+            <Cpu className="w-5 h-5" />
           </div>
           <div>
-            <div className="text-xs font-medium text-slate-400 uppercase tracking-wider">Privacy Rating</div>
-            <div className="text-xl font-bold text-slate-800 mt-0.5">100% Air-Gapped / Secure</div>
+            <p className="text-xs text-slate-400 font-medium">Processing Engine</p>
+            <p className="text-sm font-bold text-slate-200">Client-Side WebAssembly</p>
           </div>
         </div>
-
-        <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm flex items-center gap-4">
-          <div className="p-3 bg-slate-100 text-slate-600 rounded-xl">
-            <HardDrive size={22} />
+        <div className="p-4 bg-white/5 border border-white/5 rounded-2xl flex items-center gap-4">
+          <div className="p-3 bg-purple-500/10 rounded-xl border border-purple-500/20 text-purple-400">
+            <Clock className="w-5 h-5" />
           </div>
           <div>
-            <div className="text-xs font-medium text-slate-400 uppercase tracking-wider">Actions Completed</div>
-            <div className="text-xl font-bold text-slate-800 mt-0.5">{totalOperations} Task{totalOperations !== 1 && 's'} logged</div>
+            <p className="text-xs text-slate-400 font-medium">Server Latency Rate</p>
+            <p className="text-sm font-bold text-slate-200">0ms (Zero Data Transfer)</p>
           </div>
         </div>
       </div>
 
-      {/* Interactive Feature Catalog */}
-      <div className="space-y-4">
-        <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest">Available Utility Suites</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {tools.map((tool) => {
-            const Icon = tool.icon;
-            return (
-              <div 
-                key={tool.id} 
-                onClick={() => setCurrentView(tool.id)}
-                className="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 cursor-pointer flex flex-col justify-between relative overflow-hidden"
-              >
-                <div>
-                  <div className="flex justify-between items-start mb-5">
-                    <div className={`bg-gradient-to-br ${tool.color} text-white w-12 h-12 rounded-xl flex items-center justify-center shadow-md shadow-indigo-500/5 group-hover:scale-105 transition-transform duration-200`}>
-                      <Icon size={22} />
-                    </div>
-                    <span className="text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-md bg-slate-100 text-slate-500 border border-slate-200/60">
-                      {tool.badge}
-                    </span>
-                  </div>
-                  <h3 className="font-bold text-lg text-slate-800 flex items-center gap-1 group-hover:text-indigo-600 transition-colors">
-                    {tool.name} 
-                    <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                  </h3>
-                  <p className="text-sm text-slate-500 mt-2 leading-relaxed">{tool.desc}</p>
-                </div>
-                
-                <div className="mt-6 pt-4 border-t border-slate-50 text-xs font-semibold text-indigo-600 flex items-center gap-1">
-                  Launch Studio Engine &rarr;
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Dynamic Session Log */}
-      <div className="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
-        <div className="bg-slate-50 border-b border-slate-200 px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2 font-bold text-slate-800">
-            <Clock size={18} className="text-slate-500" />
-            <h2>Live Session Activity Feed</h2>
-          </div>
-          <span className="text-xs font-medium text-slate-400 bg-white px-2 py-1 border rounded-md">
-            Resets on reload
-          </span>
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
-        {activityLog.length === 0 ? (
-          <div className="text-center py-12 text-slate-400 text-sm bg-slate-50/20">
-            <p>No transactions registered in this context block yet.</p>
-            <p className="text-xs text-slate-300 mt-1">Staged file workflows will build real-time activity nodes here.</p>
+        {/* MAIN UTILITY MATRIX SELECTION GRID */}
+        <div className="lg:col-span-2 space-y-4">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500">Available Modules</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {tools.map((tool) => {
+              const Icon = tool.icon;
+              return (
+                <button
+                  key={tool.id}
+                  onClick={() => setCurrentView(tool.id)}
+                  className={`p-5 bg-white/5 backdrop-blur-md border border-white/5 rounded-2xl text-left flex flex-col justify-between transition-all duration-300 group shadow-lg ${tool.hover} hover:scale-[1.01] hover:bg-white/[0.07]`}
+                >
+                  <div className="space-y-3">
+                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center text-white shadow-md shadow-black/20 group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-200 text-base group-hover:text-white transition-colors">
+                        {tool.title}
+                      </h4>
+                      <p className="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                        {tool.desc}
+                      </p>
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
           </div>
-        ) : (
-          <div className="divide-y divide-slate-100">
-            {activityLog.map((log, index) => (
-              <div key={index} className="px-6 py-3.5 flex justify-between items-center text-sm hover:bg-slate-50/60 transition-colors">
-                <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-sm shadow-emerald-400"></span>
-                  <span className="font-medium text-slate-700">{log.action}</span>
-                </div>
-                <span className="text-slate-400 font-mono text-xs bg-slate-50 px-2 py-1 rounded border border-slate-100">{log.timestamp}</span>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+        </div>
 
+        {/* DELTA ACTIVITY TIMELINE LOG TRACKER */}
+        <div className="space-y-4">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500">Telemetry Activity Feed</h3>
+          <div className="bg-white/5 border border-white/5 rounded-2xl p-4 shadow-2xl h-[334px] flex flex-col">
+            <div className="overflow-y-auto space-y-3 flex-1 pr-1 font-mono text-[11px] scrollbar-thin">
+              {logs.map((log) => (
+                <div 
+                  key={log.id} 
+                  className={`p-2.5 rounded-xl border transition-all duration-300 animate-in slide-in-from-top-2
+                    ${log.type === 'system' 
+                      ? 'bg-slate-900/40 border-white/5 text-slate-500' 
+                      : 'bg-emerald-500/5 border-emerald-500/10 text-emerald-400'}`}
+                >
+                  <div className="flex justify-between items-start gap-2">
+                    <span className="leading-normal break-all">{log.text}</span>
+                    <span className="text-[10px] text-slate-500 shrink-0 font-sans mt-0.5">{log.time}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }
