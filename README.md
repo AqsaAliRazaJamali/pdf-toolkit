@@ -66,12 +66,18 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 <img width="903" height="441" alt="Exract" src="https://github.com/user-attachments/assets/b5f1f8e2-98a4-44c3-9ce2-6b34f2fa3637" />
 
+### Compress PDFs
+
+<img width="921" height="369" alt="Compression" src="https://github.com/user-attachments/assets/444e448f-789e-4d2c-b8d1-efd20246f0fe" />
+
+
 
 ---
 
 ## 🌟 Key Highlights
 
 - 100% Client-Side PDF Processing
+- Multi-tier Lossless Binary Stream Compression
 - No File Uploads or Server Storage
 - Drag-and-Drop PDF Reordering
 - Custom Page Range Extraction
@@ -128,6 +134,7 @@ pdf-toolkit/
 │   ├── 📁 assets/             # Images, icons, and other static resources
 │   │
 │   ├── 📁 components/         # Reusable React UI components
+│   │   ├── CompressionTool.jsx# Local file compressor studio UI & algorithm processor
 │   │   ├── Dashboard.jsx      # Home dashboard and session activity feed
 │   │   ├── ExtractTool.jsx    # PDF text extraction interface
 │   │   ├── MergeTool.jsx      # PDF merge workspace with drag-and-drop support
@@ -153,7 +160,6 @@ pdf-toolkit/
 ---
 ## 🔮 Future Improvements
 
-- PDF Compression
 - PDF Rotation
 - Password Protection
 - Watermark Support
