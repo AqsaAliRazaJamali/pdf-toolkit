@@ -75,6 +75,7 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ### Rotate PDF
 
+<img width="910" height="435" alt="Rotation" src="https://github.com/user-attachments/assets/683f8407-46fe-4276-9e6a-cd411c5e3169" />
 
 
 ---
@@ -165,7 +166,6 @@ pdf-toolkit/
 ---
 ## 🔮 Future Improvements
 
-- PDF Rotation
 - Password Protection
 - Watermark Support
 - Page Preview Thumbnails
