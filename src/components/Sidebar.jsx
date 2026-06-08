@@ -15,20 +15,20 @@ export default function Sidebar({ currentView, setCurrentView }) {
     { id: 'merge', label: 'Merge PDFs', icon: FolderSync },
     { id: 'split', label: 'Split PDF', icon: Scissors },
     { id: 'extract', label: 'Extract Text', icon: FileText },
-    { id: 'rotate', label: 'Rotate PDF', icon: RefreshCw }, // Added Rotation Track
+    { id: 'rotate', label: 'Rotate PDF', icon: RefreshCw },
   ];
 
   return (
     <aside className="w-64 h-screen bg-slate-900/60 backdrop-blur-xl border-r border-white/5 flex flex-col justify-between p-4 shrink-0 z-10">
       <div className="space-y-6">
-        {/* BRANDING HEADER */}
+        {/* BRANDING HEADER - Reverted to Toolkit Pro */}
         <div className="px-3 py-2 flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center font-black text-white text-sm shadow-md shadow-emerald-500/20">
-            N
+            PDF
           </div>
           <div>
             <h1 className="font-black text-sm tracking-wider uppercase bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
-              NexusPDF
+              Toolkit Pro
             </h1>
             <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Workspace</p>
           </div>
