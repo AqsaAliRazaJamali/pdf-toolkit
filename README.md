@@ -32,6 +32,9 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 - 📊 **Dynamic Session Feed:** Monitor completed operations and session activity in real time for a more interactive workspace experience.
 
+- 🔄 **Precision Angle Rotation (Rotate):** Adjust orientation maps of selected file sheets using custom layout transformations.
+  - Supports isolated page array selection matching Split sub-engine parsers (e.g. `1, 3-5, all`).
+  - Offers accurate incremental delta bounds (`90° CW`, `180°`, `270° CW`) without corrupting raster images or embedded font sets.
 ---
 
 ## 🛠️ Tech Stack & Engineering Principles
@@ -69,6 +72,8 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 ### Compress PDFs
 
 <img width="921" height="369" alt="Compression" src="https://github.com/user-attachments/assets/444e448f-789e-4d2c-b8d1-efd20246f0fe" />
+
+### Rotate PDF
 
 
 
