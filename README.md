@@ -35,6 +35,9 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 - 🔄 **Precision Angle Rotation (Rotate):** Adjust orientation maps of selected file sheets using custom layout transformations.
   - Supports isolated page array selection matching Split sub-engine parsers (e.g. `1, 3-5, all`).
   - Offers accurate incremental delta bounds (`90° CW`, `180°`, `270° CW`) without corrupting raster images or embedded font sets.
+- 🛡️ **Cryptographic Lockbox (Password Protection):** Secure your sensitive documents using browser-compiled, industry-standard **AES-256 encryption**.
+  - Restricts unauthorized access with native user-credential lock layers.
+  - Injects direct authorization flags to selectively prevent unauthorized **Printing**, **Text Copying**, or **Structure Editing**.
 ---
 
 ## 🛠️ Tech Stack & Engineering Principles
@@ -43,6 +46,7 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 - **Build Tool:** Vite (Fast Development Server and Optimized Production Builds)
 - **Styling Layout:** Tailwind CSS (Responsive UI, Dark/Light Themes, and Modern Layout Architecture)
 - **Core Binary Processor:** `pdf-lib` (Client-side JavaScript library for creating and modifying PDF files)
+- **Core Binary & Crypto Processors:** `pdf-lib` & `@pdfsmaller/pdf-encrypt` (For standards-compliant user security dictionary layout processing)
 - **Iconography:** Lucide React
 - **Hosting Platform:** Vercel (Continuous Deployment integrated with GitHub)
 
@@ -76,6 +80,10 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 ### Rotate PDF
 
 <img width="910" height="435" alt="Rotation" src="https://github.com/user-attachments/assets/683f8407-46fe-4276-9e6a-cd411c5e3169" />
+
+### Password Protection Studio
+
+<img width="908" height="367" alt="Password" src="https://github.com/user-attachments/assets/270fb558-a6eb-4806-94b0-6c145cba6fde" />
 
 
 ---
@@ -128,9 +136,6 @@ http://localhost:5173
 
 ---
 
-## 📂 Project Structure
-
-```text
 pdf-toolkit/
 ├── 📁 public/                 # Static assets served directly to the browser
 │   ├── favicon.svg            # Browser tab icon
@@ -144,6 +149,8 @@ pdf-toolkit/
 │   │   ├── Dashboard.jsx      # Home dashboard and session activity feed
 │   │   ├── ExtractTool.jsx    # PDF text extraction interface
 │   │   ├── MergeTool.jsx      # PDF merge workspace with drag-and-drop support
+│   │   ├── PasswordTool.jsx   # AES-256 local client-side encryption lockbox component
+│   │   ├── RotationTool.jsx   # Structural layer layout page angle rotator
 │   │   ├── Sidebar.jsx        # Application navigation sidebar
 │   │   └── SplitTool.jsx      # PDF page splitting and range extraction tool
 │   │
@@ -166,7 +173,6 @@ pdf-toolkit/
 ---
 ## 🔮 Future Improvements
 
-- Password Protection
 - Watermark Support
 - Page Preview Thumbnails
 - OCR-Based Text Extraction
