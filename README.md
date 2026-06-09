@@ -10,6 +10,7 @@
 ![PDF Merge](https://img.shields.io/badge/PDF-Merge-red?style=for-the-badge)
 ![PDF Split](https://img.shields.io/badge/PDF-Split-blue?style=for-the-badge)
 ![Text Extraction](https://img.shields.io/badge/Text-Extraction-green?style=for-the-badge)
+![AES-256 Encryption](https://img.shields.io/badge/AES--256-Encryption-teal?style=for-the-badge)
 
 ![Privacy First](https://img.shields.io/badge/Privacy-First-success?style=for-the-badge)
 ![Client Side Processing](https://img.shields.io/badge/Client--Side-Processing-blue?style=for-the-badge)
