@@ -7,7 +7,8 @@ import {
   RefreshCw, 
   Clock, 
   ShieldCheck, 
-  Cpu 
+  Cpu,
+  Lock as ProtectLockIcon // Safely aliased to prevent browser Lock() constructor collisions
 } from 'lucide-react';
 
 export default function Dashboard({ setCurrentView, logs }) {
@@ -45,12 +46,20 @@ export default function Dashboard({ setCurrentView, logs }) {
       hover: 'hover:border-purple-500/30 shadow-purple-500/5'
     },
     {
-      id: 'rotate', // Added Integration Card
+      id: 'rotate',
       title: 'Rotate Sheets',
       desc: 'Adjust spatial degrees orientation of specific page arrays while keeping vectors intact.',
       icon: RefreshCw,
       color: 'from-amber-500 to-orange-600',
       hover: 'hover:border-amber-500/30 shadow-amber-500/5'
+    },
+    {
+      id: 'password',
+      title: 'Protect PDF',
+      desc: 'Inject security keys and restriction arrays locally into documents to lock editing or system access paths.',
+      icon: ProtectLockIcon, // Using the safe aliased icon component here
+      color: 'from-teal-500 to-emerald-600',
+      hover: 'hover:border-teal-500/30 shadow-teal-500/5'
     }
   ];
 
