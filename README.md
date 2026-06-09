@@ -172,6 +172,19 @@ pdf-toolkit/
 ```
 
 ---
+
+## 🛠️ Module Availability Matrix
+
+| Feature Module | Air-Gapped? | Core Engine | Status |
+| :--- | :---: | :---: | :---: |
+| **PDF Protection** | 🔒 Yes | `@pdfsmaller/pdf-encrypt` | 🟢 Operational |
+| **Page Rotator** | 🔒 Yes | `pdf-lib` | 🟢 Operational |
+| **Smart Binder** | 🔒 Yes | `pdf-lib` | 🟢 Operational |
+| **Text Extraction**| 🔒 Yes | `pdfjs-dist` | 🟢 Operational |
+```
+
+---
+
 ## 🔮 Future Improvements
 
 - Watermark Support
