@@ -41,6 +41,18 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
   - Injects direct authorization flags to selectively prevent unauthorized **Printing**, **Text Copying**, or **Structure Editing**.
 ---
 
+## 📊 Module Availability Matrix
+
+| Feature Module | Air-Gapped | Core Engine | Status |
+|---------------|------------|-------------|---------|
+| PDF Protection | 🔒 Yes | @pdfsmaller/pdf-encrypt | 🟢 Operational |
+| Page Rotator | 🔒 Yes | pdf-lib | 🟢 Operational |
+| Smart Binder | 🔒 Yes | pdf-lib | 🟢 Operational |
+| Page Splitter | 🔒 Yes | pdf-lib | 🟢 Operational |
+| Text Extraction | 🔒 Yes | pdfjs-dist | 🟢 Operational |
+| PDF Compression | 🔒 Yes | pdf-lib | 🟢 Operational |
+---
+
 ## 🛠️ Tech Stack & Engineering Principles
 
 - **Framework:** React (Functional Components, Hooks, and Modern State Management)
@@ -171,17 +183,6 @@ pdf-toolkit/
 └── vite.config.js             # Vite development and build configuration
 ```
 
----
-
-## 🛠️ Module Availability Matrix
-
-| Feature Module | Air-Gapped? | Core Engine | Status |
-| :--- | :---: | :---: | :---: |
-| **PDF Protection** | 🔒 Yes | `@pdfsmaller/pdf-encrypt` | 🟢 Operational |
-| **Page Rotator** | 🔒 Yes | `pdf-lib` | 🟢 Operational |
-| **Smart Binder** | 🔒 Yes | `pdf-lib` | 🟢 Operational |
-| **Text Extraction**| 🔒 Yes | `pdfjs-dist` | 🟢 Operational |
-```
 
 ---
 
