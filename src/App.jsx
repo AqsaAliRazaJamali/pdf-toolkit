@@ -6,6 +6,7 @@ import SplitTool from './components/SplitTool';
 import ExtractTool from './components/ExtractTool';
 import CompressionTool from './components/CompressionTool';
 import RotationTool from './components/RotationTool';
+import PasswordTool from './components/PasswordTool';
 
 export default function App() {
   // Navigation Router State: 'dashboard' | 'merge' | 'split' | 'extract' | 'compress' | 'rotate'
@@ -74,6 +75,8 @@ export default function App() {
           {currentView === 'rotate' && (
             <RotationTool addLog={addLog} />
           )}
+          {currentView === 'password' && (
+            <PasswordTool addLog={addLog} />)}
         </div>
       </main>
 
