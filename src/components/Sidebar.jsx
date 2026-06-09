@@ -5,7 +5,8 @@ import {
   Scissors, 
   FileText, 
   Zap, 
-  RefreshCw 
+  RefreshCw,
+  Lock as PasswordLockIcon // 1. Safely imported and aliased here
 } from 'lucide-react';
 
 export default function Sidebar({ currentView, setCurrentView }) {
@@ -16,6 +17,7 @@ export default function Sidebar({ currentView, setCurrentView }) {
     { id: 'split', label: 'Split PDF', icon: Scissors },
     { id: 'extract', label: 'Extract Text', icon: FileText },
     { id: 'rotate', label: 'Rotate PDF', icon: RefreshCw },
+    { id: 'password', label: 'Protect PDF', icon: PasswordLockIcon }, // 2. Updated to use the aliased icon
   ];
 
   return (
