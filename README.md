@@ -149,40 +149,42 @@ http://localhost:5173
 
 ---
 
-pdf-toolkit/
-├── 📁 public/                 # Static assets served directly to the browser
-│   ├── favicon.svg            # Browser tab icon
-│   └── icons.svg              # SVG icon assets
-│
-├── 📁 src/                    # Main application source code
-│   ├── 📁 assets/             # Images, icons, and other static resources
-│   │
-│   ├── 📁 components/         # Reusable React UI components
-│   │   ├── CompressionTool.jsx# Local file compressor studio UI & algorithm processor
-│   │   ├── Dashboard.jsx      # Home dashboard and session activity feed
-│   │   ├── ExtractTool.jsx    # PDF text extraction interface
-│   │   ├── MergeTool.jsx      # PDF merge workspace with drag-and-drop support
-│   │   ├── PasswordTool.jsx   # AES-256 local client-side encryption lockbox component
-│   │   ├── RotationTool.jsx   # Structural layer layout page angle rotator
-│   │   ├── Sidebar.jsx        # Application navigation sidebar
-│   │   └── SplitTool.jsx      # PDF page splitting and range extraction tool
-│   │
-│   ├── App.css                # Global application styles
-│   ├── App.jsx                # Root component and application state management
-│   ├── index.css              # Tailwind CSS entry file
-│   └── main.jsx               # React application bootstrap
-│
-├── .gitignore                 # Files and folders excluded from Git tracking
-├── eslint.config.js           # ESLint configuration and code quality rules
-├── index.html                 # Single-page application entry template
-├── package.json               # Project metadata and dependencies
-├── package-lock.json          # Dependency version lock file
-├── postcss.config.js          # PostCSS configuration
-├── README.md                  # Project documentation
-├── tailwind.config.js         # Tailwind CSS customization settings
-└── vite.config.js             # Vite development and build configuration
-```
+## 📂 Project Structure
 
+```text
+pdf-toolkit/
+├── public/
+│   ├── favicon.svg
+│   └── icons.svg
+│
+├── src/
+│   ├── assets/
+│   │
+│   ├── components/
+│   │   ├── CompressionTool.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── ExtractTool.jsx
+│   │   ├── MergeTool.jsx
+│   │   ├── PasswordTool.jsx
+│   │   ├── RotationTool.jsx
+│   │   ├── Sidebar.jsx
+│   │   └── SplitTool.jsx
+│   │
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+└── vite.config.js
+```
 
 ---
 
