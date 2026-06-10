@@ -7,6 +7,7 @@ import ExtractTool from './components/ExtractTool';
 import CompressionTool from './components/CompressionTool';
 import RotationTool from './components/RotationTool';
 import PasswordTool from './components/PasswordTool';
+import WatermarkTool from './components/WatermarkTool';
 
 export default function App() {
   // Navigation Router State: 'dashboard' | 'merge' | 'split' | 'extract' | 'compress' | 'rotate'
@@ -77,6 +78,10 @@ export default function App() {
           )}
           {currentView === 'password' && (
             <PasswordTool addLog={addLog} />)}
+          {currentView === 'watermark' && (
+            <WatermarkTool addLog={addLog} />
+          )}
+
         </div>
       </main>
 
