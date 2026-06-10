@@ -36,9 +36,14 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 - 🔄 **Precision Angle Rotation (Rotate):** Adjust orientation maps of selected file sheets using custom layout transformations.
   - Supports isolated page array selection matching Split sub-engine parsers (e.g. `1, 3-5, all`).
   - Offers accurate incremental delta bounds (`90° CW`, `180°`, `270° CW`) without corrupting raster images or embedded font sets.
+
 - 🛡️ **Cryptographic Lockbox (Password Protection):** Secure your sensitive documents using browser-compiled, industry-standard **AES-256 encryption**.
   - Restricts unauthorized access with native user-credential lock layers.
   - Injects direct authorization flags to selectively prevent unauthorized **Printing**, **Text Copying**, or **Structure Editing**.
+
+- 🎨 **PDF Watermark Studio (Stamps):** Inject high-fidelity text or image-based visual overlays onto selected page targets.
+  - Supports dynamic font-sizing, hex color matching, opacity adjustment, and orientation axis vector mapping.
+  - Restricts application scope using custom range values or applies stamps globally across all pages.
 ---
 
 ## 📊 Module Availability Matrix
@@ -51,6 +56,7 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 | Page Splitter | 🔒 Yes | pdf-lib | 🟢 Operational |
 | Text Extraction | 🔒 Yes | pdfjs-dist | 🟢 Operational |
 | PDF Compression | 🔒 Yes | pdf-lib | 🟢 Operational |
+| Watermark Studio | 🔒 Yes | pdf-lib | 🟢 Operational |
 ---
 
 ## 🛠️ Tech Stack & Engineering Principles
@@ -97,6 +103,10 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 ### Password Protection Studio
 
 <img width="908" height="367" alt="Password" src="https://github.com/user-attachments/assets/270fb558-a6eb-4806-94b0-6c145cba6fde" />
+
+### Watermark Studio
+
+<img width="890" height="441" alt="Watermark" src="https://github.com/user-attachments/assets/781951d5-83dc-4786-ac91-4ccd97893e6c" />
 
 
 ---
@@ -168,7 +178,8 @@ pdf-toolkit/
 │   │   ├── PasswordTool.jsx
 │   │   ├── RotationTool.jsx
 │   │   ├── Sidebar.jsx
-│   │   └── SplitTool.jsx
+│   │   ├── SplitTool.jsx
+│   │   └── WatermarkTool.jsx
 │   │
 │   ├── App.css
 │   ├── App.jsx
@@ -190,7 +201,6 @@ pdf-toolkit/
 
 ## 🔮 Future Improvements
 
-- Watermark Support
 - Page Preview Thumbnails
 - OCR-Based Text Extraction
 
