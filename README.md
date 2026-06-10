@@ -5,6 +5,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![PDF-lib](https://img.shields.io/badge/pdf--lib-FF6B6B?style=for-the-badge)
+![PDF Watermarking](https://img.shields.io/badge/PDF-Watermarking-blueviolet?style=for-the-badge)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ![PDF Merge](https://img.shields.io/badge/PDF-Merge-red?style=for-the-badge)
