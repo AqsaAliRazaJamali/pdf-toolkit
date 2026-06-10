@@ -8,6 +8,7 @@ import {
   Clock, 
   ShieldCheck, 
   Cpu,
+  Layers, // 1. Added missing icon import
   Lock as ProtectLockIcon // Safely aliased to prevent browser Lock() constructor collisions
 } from 'lucide-react';
 
@@ -60,6 +61,14 @@ export default function Dashboard({ setCurrentView, logs }) {
       icon: ProtectLockIcon, // Using the safe aliased icon component here
       color: 'from-teal-500 to-emerald-600',
       hover: 'hover:border-teal-500/30 shadow-teal-500/5'
+    },
+    {
+      id: 'watermark',
+      title: 'Watermark Studio',
+      desc: 'Apply high-fidelity secure text or image stamps across isolated page structures locally.', // 2. Standardized to 'desc'
+      icon: Layers, 
+      color: 'from-teal-500 to-emerald-600', // 3. Standardized to 'color'
+      hover: 'hover:border-teal-500/30 shadow-teal-500/5' // 4. Added uniform hover style
     }
   ];
 
