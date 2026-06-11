@@ -81,7 +81,8 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ### Dashboard
 
-<img width="896" height="440" alt="Dashboad" src="https://github.com/user-attachments/assets/542c6a3d-9b73-402a-bb98-457ec2021693" />
+<img width="900" height="439" alt="Dashboard" src="https://github.com/user-attachments/assets/99c4ffa1-570e-46c3-924d-1c6a4a6760d4" />
+
 
 
 ### Merge PDFs
