@@ -45,6 +45,10 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 - 🎨 **PDF Watermark Studio (Stamps):** Inject high-fidelity text or image-based visual overlays onto selected page targets.
   - Supports dynamic font-sizing, hex color matching, opacity adjustment, and orientation axis vector mapping.
   - Restricts application scope using custom range values or applies stamps globally across all pages.
+ 
+- 👁️ **Interactive Canvas-Driven Previews:** Embedded a lazy-loaded, responsive thumbnail matrix across the Split, Rotate, and Watermark modules.
+  - Generates zero-server, client-side page snapshots instantly using `pdfjs-dist` inside standard HTML5 canvas scopes.
+  - Supports keyboard accessibility mapping, real-time page range input field binding, and active view zoom settings (`sm`, `md`, `lg`).
 ---
 
 ## 📊 Module Availability Matrix
@@ -122,6 +126,8 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 - Custom Page Range Extraction
 - Responsive User Interface
 - Privacy-First Design Philosophy
+- Lazy-Loaded Document Visual Map Node Arrays
+- Zero-Server Local Rendering Framework via HTML5 Canvas
 
 ---
 
@@ -177,6 +183,7 @@ pdf-toolkit/
 │   │   ├── Dashboard.jsx
 │   │   ├── ExtractTool.jsx
 │   │   ├── MergeTool.jsx
+│   │   ├── PagePreview.jsx
 │   │   ├── PasswordTool.jsx
 │   │   ├── RotationTool.jsx
 │   │   ├── Sidebar.jsx
@@ -203,7 +210,6 @@ pdf-toolkit/
 
 ## 🔮 Future Improvements
 
-- Page Preview Thumbnails
 - OCR-Based Text Extraction
 
 ---
