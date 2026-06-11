@@ -93,28 +93,34 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ### Split PDFs
 
-<img width="911" height="337" alt="Split" src="https://github.com/user-attachments/assets/4db1652f-d63d-43c8-a984-ead23450b3c2" />
+<img width="905" height="379" alt="Split" src="https://github.com/user-attachments/assets/398537e4-6c21-4c96-a5f3-361a84ce80a4" />
+
 
 
 ### Extract Text
 
-<img width="903" height="441" alt="Exract" src="https://github.com/user-attachments/assets/b5f1f8e2-98a4-44c3-9ce2-6b34f2fa3637" />
+<img width="906" height="374" alt="Extract" src="https://github.com/user-attachments/assets/bd54a7cf-98a3-464f-b428-e08137ba43a6" />
+
 
 ### Compress PDFs
 
-<img width="921" height="369" alt="Compression" src="https://github.com/user-attachments/assets/444e448f-789e-4d2c-b8d1-efd20246f0fe" />
+<img width="906" height="381" alt="Compress" src="https://github.com/user-attachments/assets/e7b3b640-d52c-430d-bb20-1873baa251ee" />
+
 
 ### Rotate PDF
 
-<img width="910" height="435" alt="Rotation" src="https://github.com/user-attachments/assets/683f8407-46fe-4276-9e6a-cd411c5e3169" />
+<img width="904" height="380" alt="Rotate" src="https://github.com/user-attachments/assets/aafef29e-30fa-45bd-8e80-184ecfb4c283" />
+
 
 ### Password Protection Studio
 
-<img width="908" height="367" alt="Password" src="https://github.com/user-attachments/assets/270fb558-a6eb-4806-94b0-6c145cba6fde" />
+<img width="910" height="385" alt="Protect" src="https://github.com/user-attachments/assets/5e7daee1-39cb-456f-9580-c5767a7de819" />
+
 
 ### Watermark Studio
 
-<img width="890" height="441" alt="Watermark" src="https://github.com/user-attachments/assets/781951d5-83dc-4786-ac91-4ccd97893e6c" />
+<img width="900" height="444" alt="Watermark" src="https://github.com/user-attachments/assets/4f52c1cc-cb0d-4ad3-8456-ca2027b3c362" />
+
 
 
 ---
@@ -210,11 +216,6 @@ pdf-toolkit/
 
 ---
 
-## 🔮 Future Improvements
-
-- OCR-Based Text Extraction
-
----
 
 ## 👤 Author
 
