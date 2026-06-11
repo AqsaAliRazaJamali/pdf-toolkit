@@ -87,7 +87,8 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ### Merge PDFs
 
-<img width="905" height="369" alt="Merge" src="https://github.com/user-attachments/assets/de082ef5-94db-4d53-b629-d5d83064151c" />
+<img width="905" height="372" alt="Merge" src="https://github.com/user-attachments/assets/0d99924c-ba66-4b56-92a5-26f0084be252" />
+
 
 
 ### Split PDFs
