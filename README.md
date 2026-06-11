@@ -58,6 +58,7 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 | Text Extraction | 🔒 Yes | pdfjs-dist | 🟢 Operational |
 | PDF Compression | 🔒 Yes | pdf-lib | 🟢 Operational |
 | Watermark Studio | 🔒 Yes | pdf-lib | 🟢 Operational |
+| Visual Previewer| 🔒 Yes | pdfjs-dist | 🟢 Operational |
 ---
 
 ## 🛠️ Tech Stack & Engineering Principles
