@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { PDFDocument } from 'pdf-lib';
+import PagePreview from './PagePreview'; // Imported safely here
 import { UploadCloud, FileText, Scissors, Sparkles, Sliders, HelpCircle, FileCheck, RefreshCw } from 'lucide-react';
 
 export default function SplitTool({ addLog }) {
   const [file, setFile] = useState(null);
+  const [selectedPages, setSelectedPages] = useState([]); // Array tracking visual checkbox indexes
   const [range, setRange] = useState('');
   const [loading, setLoading] = useState(false);
   const [splitMode, setSplitMode] = useState('range'); // 'range' or 'burst'
@@ -14,9 +16,25 @@ export default function SplitTool({ addLog }) {
     multiple: false,
     onDrop: acceptedFiles => {
       const selectedFile = acceptedFiles[0];
-      if (selectedFile) setFile(selectedFile);
+      if (selectedFile) {
+        setFile(selectedFile);
+        setSelectedPages([]); // Reset selection when a brand new file drops
+      }
     }
   });
+
+  // Bidirectional Synchronization: Translates thumbnail array selections into comma-separated text strings
+  const handleSelectionChange = (newIndices) => {
+    setSelectedPages(newIndices);
+    
+    if (newIndices.length > 0) {
+      // Maps 0-indexed values back to standard 1-based page numbers
+      const formattedRange = newIndices.map(idx => idx + 1).join(', ');
+      setRange(formattedRange);
+    } else {
+      setRange('');
+    }
+  };
 
   const splitPDF = async () => {
     if (!file) return;
@@ -41,7 +59,7 @@ export default function SplitTool({ addLog }) {
       } else {
         // Mode: Custom Range
         if (!range) {
-          alert('Please provide specific page ranges.');
+          alert('Please provide specific page ranges or select pages from the document map below.');
           setLoading(false);
           return;
         }
@@ -124,11 +142,21 @@ export default function SplitTool({ addLog }) {
               <span className="text-sm font-semibold text-slate-800 truncate max-w-md">{file.name}</span>
             </div>
             <button 
-              onClick={() => { setFile(null); setRange(''); }}
+              onClick={() => { setFile(null); setRange(''); setSelectedPages([]); }}
               className="text-xs font-semibold text-slate-400 hover:text-amber-600 flex items-center gap-1 shrink-0 transition-colors"
             >
               <RefreshCw size={12} /> Swap File
             </button>
+          </div>
+
+          {/* ADDED INTERACTIVE VISUAL THUMBNAIL MAP COMPONENT HERE */}
+          <div className="p-6 pb-0 border-b border-slate-100">
+            <PagePreview 
+              file={file} 
+              selectedPages={selectedPages} 
+              onSelectionChange={handleSelectionChange} 
+              addLog={addLog} 
+            />
           </div>
 
           <div className="p-6 space-y-6">
@@ -167,7 +195,7 @@ export default function SplitTool({ addLog }) {
                   placeholder="Ex: 1-3, 5, 8-10" 
                   value={range} 
                   onChange={e => setRange(e.target.value)}
-                  className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 bg-slate-50/50"
+                  className="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm font-mono text-slate-900 placeholder-slate-400 font-bold focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 bg-white shadow-sm"
                 />
                 
                 {/* Visual Helpers Cards */}
