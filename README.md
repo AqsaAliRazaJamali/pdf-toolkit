@@ -80,7 +80,8 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ### Dashboard
 
-<img width="900" height="439" alt="Dashboard" src="https://github.com/user-attachments/assets/99c4ffa1-570e-46c3-924d-1c6a4a6760d4" />
+<img width="897" height="441" alt="Dashboard" src="https://github.com/user-attachments/assets/51398094-eb7f-422c-bad6-891bad7eacbb" />
+
 
 
 
