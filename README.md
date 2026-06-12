@@ -119,7 +119,8 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ### Watermark Studio
 
-<img width="900" height="444" alt="Watermark" src="https://github.com/user-attachments/assets/4f52c1cc-cb0d-4ad3-8456-ca2027b3c362" />
+<img width="900" height="439" alt="Watermark" src="https://github.com/user-attachments/assets/ccab465d-9c07-44a2-8ca1-f954b36802b7" />
+
 
 
 
