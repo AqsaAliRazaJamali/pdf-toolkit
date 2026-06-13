@@ -120,7 +120,7 @@ The toolkit bypasses backend dependencies entirely by using standard browser pro
 
 1.  **Ingestion:** The user drops a document via `react-dropzone`. The browser streams the binary payload into local memory using an `ArrayBuffer`.
 2.  **Visual Matrix Compilation:** `pdfjs-dist` instantiates a local worker thread to read the structure. As pages scroll into the client's view, an `IntersectionObserver` signals a low-scale background render thread to draw the page onto a micro HTML5 `<canvas>`, providing fast previews without consuming unnecessary memory.
-3.  **Surgical Node Execution:** When a user clicks an action button (e.g., *Execute Extraction Map*), the application feeds the `ArrayBuffer` directly into `pdf-lib`. The canvas selections isolate targeted document array references, applying cryptographic hashes, geometrical rotation adjustments, or text overlays purely within memory.
+3.  **Surgical Node Execution:** When a user clicks an action button, the application feeds the `ArrayBuffer` directly into `pdf-lib`. The canvas selections isolate targeted document array references, applying cryptographic hashes, geometrical rotation adjustments, or text overlays purely within memory.
 4.  **Local Delivery:** The compiled binary matrix is converted into an in-memory Object URL Blob, and a local download stream triggers immediately to download the completed PDF asset.
 
 ---
