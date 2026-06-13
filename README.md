@@ -186,7 +186,7 @@ pdf-toolkit/
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 ### Dashboard
 
