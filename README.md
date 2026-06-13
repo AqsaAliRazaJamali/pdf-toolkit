@@ -114,6 +114,28 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ---
 
+## ⚙️ The Process: How It Works under the Hood
+
+The toolkit bypasses backend dependencies entirely by using standard browser processing sandboxes:
+
+1.  **Ingestion:** The user drops a document via `react-dropzone`. The browser streams the binary payload into local memory using an `ArrayBuffer`.
+2.  **Visual Matrix Compilation:** `pdfjs-dist` instantiates a local worker thread to read the structure. As pages scroll into the client's view, an `IntersectionObserver` signals a low-scale background render thread to draw the page onto a micro HTML5 `<canvas>`, providing fast previews without consuming unnecessary memory.
+3.  **Surgical Node Execution:** When a user clicks an action button (e.g., *Execute Extraction Map*), the application feeds the `ArrayBuffer` directly into `pdf-lib`. The canvas selections isolate targeted document array references, applying cryptographic hashes, geometrical rotation adjustments, or text overlays purely within memory.
+4.  **Local Delivery:** The compiled binary matrix is converted into an in-memory Object URL Blob, and a local download stream triggers immediately to download the completed PDF asset.
+
+---
+
+## 🧠 What I Learned
+
+Building this advanced tool required deep-diving into browser mechanics and technical software design patterns:
+
+* **Asynchronous Resource Scoping:** Learned how to safely process heavy document tasks using modular web worker threads without blocking React's main UI render loops.
+* **Performance Optimization at Scale:** Implemented lazy-loaded document maps using intersection thresholds, enabling the toolkit to handle 100+ page files smoothly inside client browsers.
+* **Bi-directional State Synchronization:** Developed synchronized UI mappings that instantly translate visual thumbnail click vectors into standard text arrays (`1-3, 5`), keeping text entries and image elements in lock-step.
+* **Binary Stream Engineering:** Gained deep experience using structural JavaScript array structures, working directly with raw `ArrayBuffer` collections and low-level cryptographic schemas.
+
+---
+
 ## 🌟 Key Highlights
 
 - 100% Client-Side PDF Processing
