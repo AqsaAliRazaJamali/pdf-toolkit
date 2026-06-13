@@ -61,7 +61,7 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ---
 
-## ⌨️ Keyboard Shortcuts & Accessibility
+##  Keyboard Shortcuts & Accessibility
 
 The interactive page preview module features standard keyboard navigation triggers to ensure a highly accessible workspace configuration:
 
