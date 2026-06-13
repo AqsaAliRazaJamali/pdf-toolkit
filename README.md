@@ -25,29 +25,14 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ## ✨ Core Features
 
-- 🔒 **Air-Gapped Security:** All PDF processing and data handling occur locally in the browser using `ArrayBuffers`. No file uploads, no server-side processing, and no third-party tracking.
+- 🔒 **Air-Gapped Security:** All operations occur locally in browser memory via raw `ArrayBuffers`.
+- 🧪 **Smart PDF Binder (Merge):** Combine multiple documents with an interactive drag-and-drop sequencing grid.
+- ✂️ **Precision Page Splicer (Split):** Extract custom ranges (e.g., `1-3, 5, 8-10`) or burst layouts into single sheets.
+- 🔄 **Precision Angle Rotation (Rotate):** Adjust document orientation maps instantly (`90° CW`, `180°`, `270° CW`) without degrading embedded raster items or font sheets.
+- 🛡️ **Cryptographic Lockbox:** Secure files using industry-standard **AES-256 encryption** with customizable permission flags (**Restrict Printing, Text Copying, or Structural Editing**).
+- 🎨 **PDF Watermark Studio:** Inject translucent text or image-based visual stamps with real-time scaling, opacity controls, and geometric range matching.
+- 👁️ **Interactive Canvas Previews:** A lazy-loaded, highly responsive thumbnail previewer built right into your favorite workflow steps.
 
-- 🧪 **Smart PDF Binder (Merge):** Combine multiple PDF documents into a single file with interactive drag-and-drop reordering for complete control over document sequence.
-
-- ✂️ **Precision Page Splicer (Split):** Extract custom page ranges (e.g., `1-3, 5, 8-10`) or automatically split an entire PDF into individual pages.
-
-- 📊 **Dynamic Session Feed:** Monitor completed operations and session activity in real time for a more interactive workspace experience.
-
-- 🔄 **Precision Angle Rotation (Rotate):** Adjust orientation maps of selected file sheets using custom layout transformations.
-  - Supports isolated page array selection matching Split sub-engine parsers (e.g. `1, 3-5, all`).
-  - Offers accurate incremental delta bounds (`90° CW`, `180°`, `270° CW`) without corrupting raster images or embedded font sets.
-
-- 🛡️ **Cryptographic Lockbox (Password Protection):** Secure your sensitive documents using browser-compiled, industry-standard **AES-256 encryption**.
-  - Restricts unauthorized access with native user-credential lock layers.
-  - Injects direct authorization flags to selectively prevent unauthorized **Printing**, **Text Copying**, or **Structure Editing**.
-
-- 🎨 **PDF Watermark Studio (Stamps):** Inject high-fidelity text or image-based visual overlays onto selected page targets.
-  - Supports dynamic font-sizing, hex color matching, opacity adjustment, and orientation axis vector mapping.
-  - Restricts application scope using custom range values or applies stamps globally across all pages.
- 
-- 👁️ **Interactive Canvas-Driven Previews:** Embedded a lazy-loaded, responsive thumbnail matrix across the Split, Rotate, and Watermark modules.
-  - Generates zero-server, client-side page snapshots instantly using `pdfjs-dist` inside standard HTML5 canvas scopes.
-  - Supports keyboard accessibility mapping, real-time page range input field binding, and active view zoom settings (`sm`, `md`, `lg`).
 ---
 
 ## 📊 Module Availability Matrix
