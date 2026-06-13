@@ -84,7 +84,7 @@ The toolkit bypasses backend dependencies entirely by using secure browser memor
 
 ---
 
-## 🧠 What I Learned
+##  What I Learned
 
 Building this tool required deep-diving into browser resource mechanics and structural data constraints:
 
