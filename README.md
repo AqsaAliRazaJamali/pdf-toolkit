@@ -1,4 +1,4 @@
-# Privacy-First Local PDF Toolkit
+# 🔒 Privacy-First Local PDF Toolkit
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
@@ -29,6 +29,16 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 -  **PDF Watermark Studio:** Inject translucent text or image-based visual stamps with real-time scaling, opacity controls, and geometric range matching.
 -  **Interactive Canvas Previews:** A lazy-loaded, highly responsive thumbnail previewer built right into your favorite workflow steps.
 
+## ✨ Core Features
+
+- 🔒 **Air-Gapped Security:** All operations occur locally in browser memory via raw `ArrayBuffers`. No file uploads, no server-side processing, and no third-party tracking.
+- 🧪 **Smart PDF Binder (Merge):** Combine multiple documents with an interactive drag-and-drop sequencing grid.
+- ✂️ **Precision Page Splicer (Split):** Extract custom ranges (e.g., `1-3, 5, 8-10`) or automatically split an entire PDF into individual pages.
+- 🔄 **Precision Angle Rotation (Rotate):** Adjust document orientation maps instantly (`90° CW`, `180°`, `270° CW`) without degrading embedded raster items or font sheets.
+- 🛡️ **Cryptographic Lockbox (Password Protection):** Secure files using industry-standard **AES-256 encryption** with customizable permission flags to selectively prevent unauthorized **Printing**, **Text Copying**, or **Structure Editing**.
+- 🎨 **PDF Watermark Studio:** Inject translucent text or image-based visual stamps with real-time scaling, opacity controls, and geometric range matching.
+- 👁️ **Interactive Canvas Previews:** A lazy-loaded, highly responsive thumbnail previewer built right into the Split, Rotate, and Watermark modules.
+
 ---
 
 ## 📊 Module Availability Matrix
@@ -43,92 +53,55 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 | PDF Compression | 🔒 Yes | pdf-lib | 🟢 Operational |
 | Watermark Studio | 🔒 Yes | pdf-lib | 🟢 Operational |
 | Visual Previewer| 🔒 Yes | pdfjs-dist | 🟢 Operational |
+
 ---
 
 ## 🛠️ Technologies & Stack
 
 ### Core Technologies
-* **Frontend Framework:** React (Functional components with hooks for highly modular state management)
-* **Build Automation:** Vite (For lightning-fast updates and highly optimized production chunks)
-* **Styling Engine:** Tailwind CSS (Modern card layouts, fluid micro-interactions, and glassmorphism UI accents)
+* **Frontend Framework:** React (Functional components with hooks for modern state management)
+* **Build Automation:** Vite (For lightning-fast development reloads and optimized production builds)
+* **Styling Layout:** Tailwind CSS (Modern card layouts, responsive flows, and custom dark accent configurations)
 * **Iconography:** Lucide React
 
 ### Engineering Libraries (The Heavy Lifters)
-* **`pdf-lib`:** Client-side JavaScript library used to read, manipulate, modify, compress, and compile low-level structural PDF maps safely in the browser.
-* **`pdfjs-dist`:** Mozilla's powerful engine utilized to read PDF streams, handle asynchronous multi-threaded parsing, and rasterize vector frames.
-* **`@pdfsmaller/pdf-encrypt`:** High-integrity cryptographic dictionary handler for parsing native PDF encryption fields.
+* **`pdf-lib`:** Client-side JavaScript engine used to create, modify, slice, and compile binary PDF streams directly.
+* **`pdfjs-dist`:** Mozilla's powerful parsing framework utilized to asynchronously render document visual layers.
+* **`@pdfsmaller/pdf-encrypt`:** High-integrity cryptographic handler for enforcing document security dictionaries.
 
 ---
 
-## 📸 Screenshots
+## ⌨️ Keyboard Shortcuts & Accessibility
 
-### Dashboard
+The interactive page preview module features standard keyboard navigation triggers to ensure a highly accessible workspace configuration:
 
-<img width="897" height="441" alt="Dashboard" src="https://github.com/user-attachments/assets/51398094-eb7f-422c-bad6-891bad7eacbb" />
-
-
-
-
-### Merge PDFs
-
-<img width="905" height="372" alt="Merge" src="https://github.com/user-attachments/assets/0d99924c-ba66-4b56-92a5-26f0084be252" />
-
-
-
-### Split PDFs
-
-<img width="905" height="379" alt="Split" src="https://github.com/user-attachments/assets/398537e4-6c21-4c96-a5f3-361a84ce80a4" />
-
-
-
-### Extract Text
-
-<img width="906" height="374" alt="Extract" src="https://github.com/user-attachments/assets/bd54a7cf-98a3-464f-b428-e08137ba43a6" />
-
-
-### Compress PDFs
-
-<img width="906" height="381" alt="Compress" src="https://github.com/user-attachments/assets/e7b3b640-d52c-430d-bb20-1873baa251ee" />
-
-
-### Rotate PDF
-
-<img width="904" height="380" alt="Rotate" src="https://github.com/user-attachments/assets/aafef29e-30fa-45bd-8e80-184ecfb4c283" />
-
-
-### Password Protection Studio
-
-<img width="910" height="385" alt="Protect" src="https://github.com/user-attachments/assets/5e7daee1-39cb-456f-9580-c5767a7de819" />
-
-
-### Watermark Studio
-
-<img width="900" height="439" alt="Watermark" src="https://github.com/user-attachments/assets/ccab465d-9c07-44a2-8ca1-f954b36802b7" />
-
-
-
+| Key Bind | Context / Scope | Functional Operation |
+|----------|----------------|----------------------|
+| `Tab` | Thumbnail Selector Map | Focuses sequentially forward to the next page layout node |
+| `Shift + Tab` | Thumbnail Selector Map | Focuses sequentially backward to the previous page layout node |
+| `Spacebar` / `Enter` | Focused Thumbnail Card | Toggles the targeted page index checkbox and synchronizes text bounds |
 
 ---
 
 ## ⚙️ The Process: How It Works under the Hood
 
-The toolkit bypasses backend dependencies entirely by using standard browser processing sandboxes:
+The toolkit bypasses backend dependencies entirely by using secure browser memory sandboxes:
 
-1.  **Ingestion:** The user drops a document via `react-dropzone`. The browser streams the binary payload into local memory using an `ArrayBuffer`.
-2.  **Visual Matrix Compilation:** `pdfjs-dist` instantiates a local worker thread to read the structure. As pages scroll into the client's view, an `IntersectionObserver` signals a low-scale background render thread to draw the page onto a micro HTML5 `<canvas>`, providing fast previews without consuming unnecessary memory.
-3.  **Surgical Node Execution:** When a user clicks an action button, the application feeds the `ArrayBuffer` directly into `pdf-lib`. The canvas selections isolate targeted document array references, applying cryptographic hashes, geometrical rotation adjustments, or text overlays purely within memory.
-4.  **Local Delivery:** The compiled binary matrix is converted into an in-memory Object URL Blob, and a local download stream triggers immediately to download the completed PDF asset.
+1. **Ingestion:** The user drops a document via `react-dropzone`. The browser streams the binary payload into local memory using an `ArrayBuffer`.
+2. **Visual Matrix Compilation:** `pdfjs-dist` instantiates a local worker thread to read the structure. As pages scroll into the client's view, an `IntersectionObserver` signals a low-scale background render thread to draw the page onto a micro HTML5 `<canvas>`, providing fast previews without consuming unnecessary memory.
+3. **Surgical Node Execution:** When a user clicks an action button, the application feeds the `ArrayBuffer` directly into `pdf-lib`. The canvas selections isolate targeted document array references, applying cryptographic hashes, geometrical rotation adjustments, or text overlays purely within memory.
+4. **Local Delivery:** The compiled binary matrix is converted into an in-memory Object URL Blob, and a local download stream triggers immediately to download the completed PDF asset.
 
 ---
 
 ## 🧠 What I Learned
 
-Building this advanced tool required deep-diving into browser mechanics and technical software design patterns:
+Building this tool required deep-diving into browser resource mechanics and structural data constraints:
 
-* **Asynchronous Resource Scoping:** Learned how to safely process heavy document tasks using modular web worker threads without blocking React's main UI render loops.
-* **Performance Optimization at Scale:** Implemented lazy-loaded document maps using intersection thresholds, enabling the toolkit to handle 100+ page files smoothly inside client browsers.
-* **Bi-directional State Synchronization:** Developed synchronized UI mappings that instantly translate visual thumbnail click vectors into standard text arrays (`1-3, 5`), keeping text entries and image elements in lock-step.
-* **Binary Stream Engineering:** Gained deep experience using structural JavaScript array structures, working directly with raw `ArrayBuffer` collections and low-level cryptographic schemas.
+* **Asynchronous Resource Scoping:** Mastered processing heavy, thread-blocking document workflows locally using background web workers without lagging React's primary execution frame loop.
+* **Performance Optimization at Scale:** Implemented strict intersection threshold triggers to lazy-load vector page models, enabling the UI to seamlessly navigate 100+ page documents.
+* **Bi-directional State Synchronization:** Engineered reactive state synchronization architectures that cleanly translate mouse click array coordinates into formatted comma-separated strings (`1-3, 5`), keeping text models and graphic previews synchronized perfectly.
+* **Binary Stream Engineering:** Gained native experience manipulating low-level file structures using typed data streams, raw array maps, and asset allocation wrappers.
 
 ---
 
@@ -222,6 +195,57 @@ pdf-toolkit/
 ```
 
 ---
+
+## 📸 Screenshots
+
+### Dashboard
+
+<img width="897" height="441" alt="Dashboard" src="https://github.com/user-attachments/assets/51398094-eb7f-422c-bad6-891bad7eacbb" />
+
+
+
+
+### Merge PDFs
+
+<img width="905" height="372" alt="Merge" src="https://github.com/user-attachments/assets/0d99924c-ba66-4b56-92a5-26f0084be252" />
+
+
+
+### Split PDFs
+
+<img width="905" height="379" alt="Split" src="https://github.com/user-attachments/assets/398537e4-6c21-4c96-a5f3-361a84ce80a4" />
+
+
+
+### Extract Text
+
+<img width="906" height="374" alt="Extract" src="https://github.com/user-attachments/assets/bd54a7cf-98a3-464f-b428-e08137ba43a6" />
+
+
+### Compress PDFs
+
+<img width="906" height="381" alt="Compress" src="https://github.com/user-attachments/assets/e7b3b640-d52c-430d-bb20-1873baa251ee" />
+
+
+### Rotate PDF
+
+<img width="904" height="380" alt="Rotate" src="https://github.com/user-attachments/assets/aafef29e-30fa-45bd-8e80-184ecfb4c283" />
+
+
+### Password Protection Studio
+
+<img width="910" height="385" alt="Protect" src="https://github.com/user-attachments/assets/5e7daee1-39cb-456f-9580-c5767a7de819" />
+
+
+### Watermark Studio
+
+<img width="900" height="439" alt="Watermark" src="https://github.com/user-attachments/assets/ccab465d-9c07-44a2-8ca1-f954b36802b7" />
+
+
+
+
+---
+
 
 
 ## 👤 Author
