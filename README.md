@@ -21,16 +21,6 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ## ✨ Core Features
 
--  **Air-Gapped Security:** All operations occur locally in browser memory via raw `ArrayBuffers`.
--  **Smart PDF Binder (Merge):** Combine multiple documents with an interactive drag-and-drop sequencing grid.
--  **Precision Page Splicer (Split):** Extract custom ranges (e.g., `1-3, 5, 8-10`) or burst layouts into single sheets.
--  **Precision Angle Rotation (Rotate):** Adjust document orientation maps instantly (`90° CW`, `180°`, `270° CW`) without degrading embedded raster items or font sheets.
--  **Cryptographic Lockbox:** Secure files using industry-standard **AES-256 encryption** with customizable permission flags (**Restrict Printing, Text Copying, or Structural Editing**).
--  **PDF Watermark Studio:** Inject translucent text or image-based visual stamps with real-time scaling, opacity controls, and geometric range matching.
--  **Interactive Canvas Previews:** A lazy-loaded, highly responsive thumbnail previewer built right into your favorite workflow steps.
-
-## ✨ Core Features
-
 - 🔒 **Air-Gapped Security:** All operations occur locally in browser memory via raw `ArrayBuffers`. No file uploads, no server-side processing, and no third-party tracking.
 - 🧪 **Smart PDF Binder (Merge):** Combine multiple documents with an interactive drag-and-drop sequencing grid.
 - ✂️ **Precision Page Splicer (Split):** Extract custom ranges (e.g., `1-3, 5, 8-10`) or automatically split an entire PDF into individual pages.
