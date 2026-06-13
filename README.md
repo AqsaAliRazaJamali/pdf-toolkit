@@ -31,7 +31,7 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ---
 
-## 📊 Module Availability Matrix
+##  Module Availability Matrix
 
 | Feature Module | Air-Gapped | Core Engine | Status |
 |---------------|------------|-------------|---------|
