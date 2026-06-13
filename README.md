@@ -13,10 +13,6 @@
 ![AES-256 Encryption](https://img.shields.io/badge/AES--256-Encryption-teal?style=for-the-badge)
 ![PDF Watermarking](https://img.shields.io/badge/PDF-Watermarking-blueviolet?style=for-the-badge)
 
-![Privacy First](https://img.shields.io/badge/Privacy-First-success?style=for-the-badge)
-![Client Side Processing](https://img.shields.io/badge/Client--Side-Processing-blue?style=for-the-badge)
-![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
 A modern PDF workspace that allows users to manipulate PDF documents entirely within the browser. By leveraging client-side processing with binary data handling, the application ensures complete privacy—your files never leave your device or get uploaded to a server.
 
 🚀 **[Live Demo](https://vercel.com/aqsa-jamali-s-projects/pdf-toolkit)**
