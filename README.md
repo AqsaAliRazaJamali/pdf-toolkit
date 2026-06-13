@@ -49,15 +49,18 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 | Visual Previewer| 🔒 Yes | pdfjs-dist | 🟢 Operational |
 ---
 
-## 🛠️ Tech Stack & Engineering Principles
+## 🛠️ Technologies & Stack
 
-- **Framework:** React (Functional Components, Hooks, and Modern State Management)
-- **Build Tool:** Vite (Fast Development Server and Optimized Production Builds)
-- **Styling Layout:** Tailwind CSS (Responsive UI, Dark/Light Themes, and Modern Layout Architecture)
-- **Core Binary Processor:** `pdf-lib` (Client-side JavaScript library for creating and modifying PDF files)
-- **Core Binary & Crypto Processors:** `pdf-lib` & `@pdfsmaller/pdf-encrypt` (For standards-compliant user security dictionary layout processing)
-- **Iconography:** Lucide React
-- **Hosting Platform:** Vercel (Continuous Deployment integrated with GitHub)
+### Core Technologies
+* **Frontend Framework:** React (Functional components with hooks for highly modular state management)
+* **Build Automation:** Vite (For lightning-fast updates and highly optimized production chunks)
+* **Styling Engine:** Tailwind CSS (Modern card layouts, fluid micro-interactions, and glassmorphism UI accents)
+* **Iconography:** Lucide React
+
+### Engineering Libraries (The Heavy Lifters)
+* **`pdf-lib`:** Client-side JavaScript library used to read, manipulate, modify, compress, and compile low-level structural PDF maps safely in the browser.
+* **`pdfjs-dist`:** Mozilla's powerful engine utilized to read PDF streams, handle asynchronous multi-threaded parsing, and rasterize vector frames.
+* **`@pdfsmaller/pdf-encrypt`:** High-integrity cryptographic dictionary handler for parsing native PDF encryption fields.
 
 ---
 
