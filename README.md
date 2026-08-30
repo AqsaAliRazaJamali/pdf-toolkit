@@ -21,7 +21,7 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ## ✨ Core Features
 
--  **Air-Gapped Security:** All Operations occur locally in browser memory via raw `ArrayBuffers`. No file uploads, no server-side processing, and no third-party tracking.
+-  **Air-Gapped Security:** All Operations occur locally in Browser memory via raw `ArrayBuffers`. No file uploads, no server-side processing, and no third-party tracking.
 -  **Smart PDF Binder (Merge):** Combine multiple documents with an interactive drag-and-drop sequencing grid.
 -  **Precision Page Splicer (Split):** Extract custom ranges (e.g., `1-3, 5, 8-10`) or automatically split an entire PDF into individual pages.
 -  **Precision Angle Rotation (Rotate):** Adjust document orientation maps instantly (`90° CW`, `180°`, `270° CW`) without degrading embedded raster items or font sheets.
