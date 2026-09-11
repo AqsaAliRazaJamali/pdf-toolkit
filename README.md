@@ -73,7 +73,7 @@ The interactive page preview module features standard keyboard navigation trigge
 
 ---
 
-## ⚙️ The Process: How It Works 
+## ⚙️ The Process: How It Works under the hood
 
 The toolkit bypasses backend dependencies entirely by using secure browser memory sandboxes:
 
