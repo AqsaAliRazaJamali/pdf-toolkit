@@ -95,7 +95,7 @@ Building this tool required deep-diving into browser resource mechanics and stru
 
 ---
 
-## 🌟 Key Highlights
+## Key Highlights
 
 - 100% Client-Side PDF Processing
 - Multi-tier Lossless Binary Stream Compression
