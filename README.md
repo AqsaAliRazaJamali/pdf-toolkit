@@ -19,7 +19,7 @@ A modern PDF workspace that allows users to manipulate PDF documents entirely wi
 
 ---
 
-## ✨ Core Features
+## Core Features
 
 -  **Air-Gapped Security:** All Operations occur locally in Browser memory via raw `ArrayBuffers`. No file uploads, no server-side processing, and no third-party tracking.
 -  **Smart PDF Binder (Merge):** Combine multiple documents with an interactive drag-and-drop sequencing grid.
