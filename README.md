@@ -11,9 +11,9 @@
 ![PDF Split](https://img.shields.io/badge/PDF-Split-blue?style=for-the-badge)
 ![Text Extraction](https://img.shields.io/badge/Text-Extraction-green?style=for-the-badge)
 ![AES-256 Encryption](https://img.shields.io/badge/AES--256-Encryption-teal?style=for-the-badge)
-![PDF Watermarking](https://img.shields.io/badge/PDF-Watermarking-blueviolet?style=for-the-badge)
+![PDF Watermarking](https://img.shields.io/badge/PDF-Watermarking-blueviolet?style=for-the-badgserve
 
-A modern, browser-based PDF workspace that enables users to view, manage, and manipulate PDF documents directly on their devices without relying on server-side processing. Built around client-side file handling and binary data processing, the application prioritizes data privacy and security by ensuring that documents remain on the user's device and are never uploaded to an external server.
+A modern PDF workspace that allows users to manipulate PDF documents entirely within the browser. By leveraging client-side processing with binary data handling, the application ensures complete privacy—your files never leave your device or get uploaded to a server.
 
 🚀 **[Live Demo](https://vercel.com/aqsa-jamali-s-projects/pdf-toolkit)**
 
